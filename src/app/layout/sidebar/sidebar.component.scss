@@ -1,0 +1,71 @@
+@import '../../../styles.scss';
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  img {
+    max-width: 130px;
+  }
+}
+
+.side-bar__logo {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.side-bar__content-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.side-bar__items {
+  padding-top: 40px;
+}
+
+.side-bar__item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid $line-color;
+  padding: 5px 5px 5px 20px;
+  
+  span {
+    margin-right: 10px;
+  }
+}
+
+.side-bar__icon {
+  color: #707575
+}
+
+.side-bar__item:hover {
+  background-color: $primary-color;
+  box-shadow: 0 1px 2px rgba(#000, 0.15);
+  border-left: 4px solid $secondary-color;
+  font-weight: bold;
+}
+
+.side-bar__change-mode {
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+  margin-bottom: 60px;
+  padding: 5px 5px 5px 20px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  &--label {
+    margin-left: 10px;
+  }
+}

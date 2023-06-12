@@ -1,0 +1,19 @@
+<div class='side-bar'>
+    <div class='side-bar__logo'>
+         <img class='logo' alt='logo' src='/assets/logo.png' />
+    </div>
+    <div class='side-bar__content-items'>
+        <div class='side-bar__items'>
+        <div *ngFor="let item of items" class='side-bar__item'>
+            <span> <mat-icon class="side-bar__icon">{{item.icon}}</mat-icon> </span>{{item.name}}
+        </div>
+        </div>
+        <div class='side-bar__change-mode'>
+        <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+        </label>
+        <div class='side-bar__change-mode--label'>Modo Oscuro</div>
+        </div>
+    </div>
+</div>
