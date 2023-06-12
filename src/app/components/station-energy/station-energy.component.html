@@ -1,0 +1,33 @@
+<card>
+  <card-header>
+    <div class='station-energy__selects'>
+      <div>
+        <label>ACTIVO</label>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select (selectionChange)="changeAsset($event.value)">
+            <mat-option *ngFor="let asset of assets" [value]="asset.id">
+              {{asset.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label>ESTACIÓN</label>
+        <mat-form-field>
+          <mat-label>Seleccionar Estación</mat-label>
+          <mat-select (selectionChange)="selectStation($event.value)">
+            <mat-option *ngFor="let station of stations" [value]="station.id">
+              {{station.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </card-header>
+  <card-content>
+    <app-total-energy [title]="title_content" [total]="station?.total_energy"></app-total-energy>
+  </card-content>
+</card>
+
