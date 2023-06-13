@@ -32,6 +32,6 @@ export class StationEnergyComponent implements OnInit {
 
   selectStation = (id:number) => {
     this.station = this.stations.find(station=> station.id === id)
-
+    this.dataService.fetchChargers(id)
   }
 }

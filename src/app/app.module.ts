@@ -22,6 +22,7 @@ import { FooterComponent } from './shared/card/footer/footer.component';
 import { StationEnergyComponent } from './components/station-energy/station-energy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TotalEnergyComponent } from './shared/total-energy/total-energy.component';
+import { ChargersComponent } from './components/chargers/chargers.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TotalEnergyComponent } from './shared/total-energy/total-energy.compone
     ContentComponent,
     FooterComponent,
     StationEnergyComponent,
-    TotalEnergyComponent
+    TotalEnergyComponent,
+    ChargersComponent
   ],
   imports: [
     BrowserModule,

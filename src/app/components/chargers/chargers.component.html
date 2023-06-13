@@ -1,0 +1,28 @@
+<card>
+  <card-header>
+    <div class='chargers__select'>
+      <div>
+        <label>ACTIVO</label>
+        <mat-form-field>
+          <mat-label>Seleccione</mat-label>
+          <mat-select (selectionChange)="changeChargers($event.value)" >
+            <mat-option *ngFor="let charge of chargers" [value]="charge.id">
+              {{charge.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </card-header>
+  <card-content>
+    <label>Conectores:</label>
+      <div class='chargers__connectors' >
+          <div class='chargers__connector' *ngFor="let connector of connectors">
+            <label>Conector {{connector?.name}}</label>
+          </div>
+      </div>
+    <app-total-energy [title]="title_content" [total]="charger?.energy_supplied"></app-total-energy>
+    <card-footer></card-footer>
+  </card-content>
+</card>
+
